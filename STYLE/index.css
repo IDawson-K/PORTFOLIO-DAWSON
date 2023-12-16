@@ -112,7 +112,7 @@ header .marquee span {
   }
 }
 .presentation {
-  margin: 4vw auto;
+  margin: auto;
   gap: 1rem;
   max-width: 1200px;
   padding: 1rem;
@@ -148,13 +148,11 @@ header .marquee span {
 }
 
 .diplomes {
-  margin: 4vw auto;
+  margin: auto;
   gap: 1rem;
   max-width: 1200px;
   padding: 1rem;
   background: #E5CFC7;
-  border-top-left-radius: 1.4rem;
-  border-top-right-radius: 1.4rem;
 }
 .diplomes h2 {
   text-align: center;
