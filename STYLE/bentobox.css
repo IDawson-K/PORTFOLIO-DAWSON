@@ -10,9 +10,55 @@
 .bentobox .box {
   height: 20vw;
   height: calc(50px + 17vw);
-  background: #230A02;
-  border-radius: 1.2rem;
+  border-radius: 1rem;
   grid-column: span 4;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.bentobox .box:hover div {
+  transform: translate(0);
+  opacity: 1;
+}
+.bentobox .box:hover img {
+  filter: blur(6px) brightness(0.6);
+  transform: scale(1.1);
+}
+.bentobox .box img, .bentobox .box div {
+  border-radius: 1rem;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.bentobox .box div {
+  background: linear-gradient(0deg, rgba(1, 10, 24, 0.9660656499) 0%, rgba(78, 49, 2, 0) 100%);
+  padding: 2.4vw;
+  display: flex;
+  gap: 0.2vw;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: 0;
+  transform: translateY(10vw);
+}
+.bentobox .box div h3, .bentobox .box div h4, .bentobox .box div h5 {
+  color: #F9EDEA;
+}
+.bentobox .box div h3 {
+  font-weight: 900;
+  font-size: 2.5vw;
+  letter-spacing: 0.1rem;
+}
+.bentobox .box div h4 {
+  font-size: 1.8vw;
+  opacity: 0.8;
+  letter-spacing: 0.1rem;
+}
+.bentobox .box div h5 {
+  font-size: 1vw;
+  font-weight: 400;
+  padding-top: 1.2vw;
 }
 
 .box1 {
@@ -61,4 +107,13 @@
 
 .box12 {
   grid-column: span 4;
+}
+
+@media (width < 600px) {
+  .bentobox .box div h3, .bentobox .box div h5 {
+    letter-spacing: 0;
+  }
+  .bentobox .box div h5 {
+    opacity: 0;
+  }
 }/*# sourceMappingURL=bentobox.css.map */

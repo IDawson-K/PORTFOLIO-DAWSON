@@ -11,12 +11,14 @@ $logo: #230A02
     font-family: Inter
     color: $logo
     transition: 0.4s
+    scroll-behavior: smooth
 
 button
     border: none
     background: $logo
-    color: $creme
     padding: 0 1rem
+    a
+        color: $creme
 
 h1
     font-family: Inter
@@ -26,19 +28,24 @@ body
     overflow-x: hidden
 
 .noto
+    font-size: calc( 0.5rem + 1vw )
     font-family: Noto Emoji
     font-weight: 700
     display: none
+
+a
+    text-decoration: none
 
 // NAVBAR
 nav
     display: flex
     align-items: center
     justify-content: space-between
-    margin: 1.2rem 4vw
+    margin: 1.2rem 2.8vw
+    font-size: calc( 0.5rem + 1vw )
     .CTA
         white-space: nowrap
-        height: 46px
+        padding: 0.9rem
         border-radius: 0.6rem
         cursor: pointer
         &:hover
@@ -52,7 +59,7 @@ nav
 
 .menu
     flex-grow: 1
-    margin: 0 5vw
+    margin: 0 4vw
     display: flex
     gap: 0.4rem
     background: $input
@@ -102,6 +109,7 @@ header
 // PRESENTATION
 .presentation
     margin: auto
+    margin-top: 3rem
     gap: 1rem
     max-width: 1200px
     padding: 1rem
@@ -118,20 +126,23 @@ header
         gap: 1rem
         div
             padding: 1rem 1.2rem
-            background: $logo
-            color: $creme
+            background: $creme
+            color: $logo
             border-radius: 1rem
-            height: calc( 230px - 6vw )
+            min-height: calc( 30px + 6vw )
             font-size: calc( 0.6rem + 0.4vw )
+            font-weight: 500
+            letter-spacing: 0.1vw
+            line-height: 1.4
             display: flex
             align-items: center
             justify-content: center
         img
             border-radius: 1rem
-            width: calc( 230px - 6vw )
-            height: calc( 230px - 6vw )
+            width: calc( 30px + 6vw )
+            height: calc( 30px + 6vw )
 
-// PRESENTATION
+// DIPLOMES
 .diplomes
     margin: auto
     gap: 1rem
@@ -140,23 +151,228 @@ header
     background: $input
     h2
         text-align: center
-        letter-spacing: 1vw
-        padding-top: 0.6rem
+        letter-spacing: 0.5vw
+        padding-top: 1.2rem
         padding-bottom: 1.6rem
-    div
+    .container
         display: flex
         gap: 1rem
-        div
-            padding: 1rem 1.2rem
-            background: $logo
-            color: $creme
+        flex-wrap: wrap
+        .diplome
+            position: relative
+            flex-grow: 1
+            height: calc( 5vw + 90px )
+            width: 20%
+            background: $creme
+            color: $logo
             border-radius: 1rem
-            height: calc( 230px - 6vw )
-            font-size: calc( 0.6rem + 0.4vw )
             display: flex
             align-items: center
             justify-content: center
+            img,div
+                text-align: center
+                position: absolute
+            img
+                height: 88%
+                opacity: 0.1
+            div
+                padding: 0.8rem 0.4rem
+                height: 100%
+                width: 100%
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                h3
+                    font-size: calc( 0.8rem + 0.8vw )
+                    font-weight: 800
+                    letter-spacing: 0.1vw
+                h4
+                    font-size: calc( 0.4rem + 0.5vw )
+                    font-weight: 500
+                h5
+                    font-size: calc( 0.4rem + 0.5vw )
+                    font-weight: 500
+                    font-style: italic
+                h6
+                    font-size: calc( 0.6rem + 0.5vw )
+                    font-weight: 700
 
+// EXPERIENCES
+.experiences
+    margin: auto
+    gap: 1rem
+    max-width: 1200px
+    padding: 1rem
+    background: $input
+    h2
+        text-align: center
+        letter-spacing: 0.5vw
+        padding-top: 1.2rem
+        padding-bottom: 1.6rem
+    .container
+        display: flex
+        gap: 1rem
+        flex-wrap: wrap
+        .xp
+            display: flex
+            background: $creme
+            flex-grow: 1
+            border-radius: 1rem
+            padding: 0.6rem
+            gap: calc( 0.5rem + 1vw )
+            align-items: center
+            .specs
+                display: flex
+                gap: 0.6rem
+                height: 100%
+            .spec
+                display: flex
+                justify-content: space-around
+                flex-direction: column
+                white-space: nowrap
+                text-align: center
+                border-radius: 0.5rem
+                padding: 0.5rem calc( 0.3rem + 1vw )
+                background: $logo
+                font-weight: 700
+                font-size: calc( 0.6rem + 0.6vw )
+                height: 100%
+                span
+                    color: $creme
+            .para
+                display: flex
+                flex-direction: column
+                justify-content: space-around
+                height: 100%
+                h3,h4
+                    margin-bottom: 0.3rem
+                h3
+                    letter-spacing: 0.1vw
+                    font-size: calc( 1rem + 0.4vw )
+                    font-weight: 800
+                h4
+                    font-size: 0.8rem
+                    opacity: 0.6
+                h5
+                    line-height: 1.2
+                    font-weight: 500
+                    font-style: italic
+                    font-size: calc( 0.6rem + 0.5vw )
+// COMPETENCES
+.container
+        display: flex
+        gap: 1rem
+.gauche
+    flex-grow: 1
+    background: $creme
+    padding: 0.8rem 0.8rem
+    border-radius: 0.9rem
+    display: flex
+    gap: 0.8rem
+    .applis
+        flex-grow: 1
+        justify-content: space-around
+        display: flex
+        flex-wrap: wrap
+        gap: 0.8rem
+        div
+            flex-grow: 1
+            background: transparentize($input, 0.5)
+            border-radius: 0.5rem
+            padding: 0.3rem
+            display: flex
+            align-items: center
+            span
+                margin-left: 0.5rem
+                font-size: 1rem
+            img
+                width: 30px
+.milieu
+    display: flex
+    flex-direction: column
+    gap: 1rem
+    width: 100%
+    .lang
+        display: flex
+        justify-content: space-between
+        align-items: center
+        gap: 0.6rem
+        border-radius: 0.9rem
+        background: $creme
+        padding: 0.6rem
+        img
+            height: 46px
+            border-radius: 0.45rem
+        span
+            width: 100%
+            padding: 0 0.6rem
+        div
+            white-space: nowrap
+            font-weight: 700
+            font-size: 0.6rem
+            letter-spacing: 0.05rem
+            background: transparentize($input, 0.5)
+            height: 100%
+            display: flex
+            align-items: center
+            padding: 0 0.8rem
+            border-radius: 0.45rem
+    .pf
+        background: $creme
+        padding: 0.8rem
+        text-align: center
+        border-radius: 0.9rem
+        h3
+            margin-top: 0.4rem
+        div
+            display: flex
+            flex-wrap: wrap
+            padding: 1rem
+            gap: 1rem
+            div
+                display: flex
+                justify-content: center
+                flex-grow: 1
+                white-space: nowrap
+                border-radius: 999px
+                background: transparentize($input, 0.5)
+                padding: 0.4rem 0.8rem
+
+.droite
+    width: 100%
+    .permis
+        background: $creme
+        width: 100%
+        padding: 0.8rem
+        border-radius: 0.8rem
+        display: flex
+        gap: 0.8rem
+        align-items: center
+        img
+            height: 20px
+            transform: rotateY(180deg)
+
+.domaines
+    margin-top: 1rem
+    background: $creme
+    padding: 0.8rem
+    text-align: center
+    border-radius: 0.8rem
+    h3
+        margin-bottom: 1.2rem
+        margin-top: 0.4rem
+    .tout
+        display: flex
+        gap: 1rem
+        flex-wrap: wrap
+        .padding
+            padding: 0.8rem
+            background: transparentize($input, 0.5)
+            border-radius: 0.8rem
+            flex-grow: 1
+            div
+                padding: 0.2rem
+            
 // FOOTER
 footer
     height: 200px
@@ -178,8 +394,13 @@ footer
         display: unset
     .pc
         display: none
-    
-// SCROLLBAR
+    .diplomes
+        .container
+            .diplome
+                width: 45%
+    .specs
+        flex-direction: column
+
 ::-webkit-scrollbar
     width: 14px
 
