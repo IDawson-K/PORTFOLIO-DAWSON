@@ -438,7 +438,6 @@ header .marquee span {
 }
 
 footer {
-  height: 200px;
   background: #230A02;
   color: #F9EDEA;
 }
@@ -448,6 +447,33 @@ footer h2 {
   letter-spacing: 1rem;
   font-size: 0.8rem;
   font-weight: 400;
+  padding: 1rem;
+}
+footer .container {
+  max-width: 1200px;
+  padding: 1rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+footer .container .reseaux {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+footer .container .reseaux div {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+footer .container .reseaux div img {
+  width: 40px;
+}
+footer .container .reseaux div span {
+  color: #F9EDEA;
+  font-weight: 600;
+}
+footer .container .infos {
   padding: 1rem;
 }
 
