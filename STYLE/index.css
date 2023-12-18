@@ -109,7 +109,7 @@ header .marquee span {
   white-space: nowrap;
   letter-spacing: 0.2rem;
   margin-left: 0.5rem;
-  animation: marquee 14s linear infinite;
+  animation: marquee 26s linear infinite;
 }
 
 @keyframes marquee {
