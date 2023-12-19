@@ -45,7 +45,7 @@ nav
     font-size: calc( 0.5rem + 1vw )
     .CTA
         white-space: nowrap
-        padding: 0.9rem
+        height: 48px
         border-radius: 0.6rem
         cursor: pointer
         &:hover
@@ -58,6 +58,7 @@ nav
             filter: brightness(0)
 
 .menu
+    height: 48px
     flex-grow: 1
     margin: 0 4vw
     display: flex
@@ -67,10 +68,11 @@ nav
     font-weight: 500
     border-radius: 0.6rem
     span
-        text-align: center
+        display: flex
+        align-items: center
+        justify-content: center
         border: 1px solid transparentize($logo, 0.8)
         border-radius: 0.4rem
-        padding: 0.4rem
         flex-grow: 1
         letter-spacing: 0.1vw
         cursor: pointer
