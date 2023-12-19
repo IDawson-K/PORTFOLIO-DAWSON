@@ -8,6 +8,7 @@
   grid-template-columns: repeat(12, 1fr);
 }
 .bentobox .box {
+  box-shadow: 0 0 2px #E5CFC7;
   height: 20vw;
   height: calc(50px + 17vw);
   border-radius: 1rem;
