@@ -389,8 +389,8 @@ footer
         padding: 1rem
         margin: auto
         display: flex
-        justify-content: space-between
-        .reseaux
+        justify-content: space-around
+        .reseaux,.infos
             display: flex
             flex-direction: column
             gap: 1rem
@@ -409,10 +409,8 @@ footer
                 span
                     color: $creme
                     font-weight: 600
-                    font-size: 0.8rem
-                    margin-right: 0.4rem
-        .infos
-            padding: 1rem
+                    font-size: calc( 0.5rem + 0.6vw )
+                    margin-right: 2vw
 
 // SMARTPHONE
 @media (width < 600px)
